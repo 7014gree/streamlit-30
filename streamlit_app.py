@@ -5,11 +5,12 @@ import numpy as np
 import pandas as pd
 
 
-st.header('st.selectbox')
+st.header('st.multiselect')
 
-option = st.selectbox(
-    "What is your favourite colour:",
-    ('Red', 'Blue', 'Green')
+options = st.multiselect(
+    "What are your favourite colours:",
+    ['Green', 'Yellow', 'Red', 'Blue'],
+    ['Yellow', 'Red']
 )
 
-st.write("Your favourite colour is ", option)
+st.write("You selected:", ', '.join(options))
