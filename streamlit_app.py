@@ -5,12 +5,19 @@ import numpy as np
 import pandas as pd
 
 
-st.header('st.multiselect')
+st.header('st.checkbox')
 
-options = st.multiselect(
-    "What are your favourite colours:",
-    ['Green', 'Yellow', 'Red', 'Blue'],
-    ['Yellow', 'Red']
-)
+st.write('What would you like to order?')
 
-st.write("You selected:", ', '.join(options))
+icecream = st.checkbox("Ice cream")
+coffee = st.checkbox("Coffee")
+cola = st.checkbox("Cola")
+
+if icecream:
+    st.write("Great! Here's some more :icecream:")
+
+if coffee:
+    st.write("Okay, here's some coffee :coffee:")
+
+if cola:
+    st.write("Here you go :cup_with_straw:")
