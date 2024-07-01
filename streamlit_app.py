@@ -5,11 +5,11 @@ import numpy as np
 import pandas as pd
 
 
-st.header('Line chart')
+st.header('st.selectbox')
 
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=['a', 'b', 'c']
+option = st.selectbox(
+    "What is your favourite colour:",
+    ('Red', 'Blue', 'Green')
 )
 
-st.line_chart(chart_data)
+st.write("Your favourite colour is ", option)
